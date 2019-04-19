@@ -1,4 +1,5 @@
 var wins=0;
+var lost=0;
 
 function f1() {
 let words=["apple", "orange", "plum", "kiwi", "banana"];
@@ -14,6 +15,7 @@ mystery.push("_");
 document.querySelector(".myst strong").innerText=mystery.join(" ");
 document.querySelector(".attempt strong").innerText=attempt;
 document.querySelector(".wins strong").innerText=wins;
+document.querySelector(".lost strong").innerText=lost;
 document.querySelector(".choice strong").innerText=choice;
 
 document.onkeyup=function(event) {
@@ -44,7 +46,7 @@ document.querySelector(".choice strong").innerText=choice;
 
     if(attempt==0) {
         console.log("You lose");
-    
+    lost++;
         f1();
     }
 
